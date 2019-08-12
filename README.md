@@ -11,4 +11,3 @@ Add your config to volume /var/roundcube/config
            -v /etc/localtime:/etc/localtime \
            -v ${PWD}/config:/var/roundcube/config \
            roundcube
-
