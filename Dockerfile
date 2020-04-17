@@ -4,7 +4,9 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
             ca-certificates \
             roundcube \
             roundcube-sqlite3 \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && ln -sf /dev/stdout /var/log/apache2/error.log \
+    && ln -sf /dev/stdout /var/log/apache2/access.log
 
 EXPOSE 80
 

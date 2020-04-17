@@ -7,5 +7,6 @@ do
 	echo "include_once('$config'); // added by docker" >> /etc/roundcube/config.inc.php
 done
 
-service apache2 restart
-sleep inf
+#service apache2 restart
+#sleep inf
+/usr/sbin/apache2ctl -DFOREGROUND
